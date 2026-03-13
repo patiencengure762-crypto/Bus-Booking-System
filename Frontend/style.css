@@ -1,0 +1,138 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #8a9ef5, #b9a1dc);
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.2);
+    overflow: hidden;
+}
+
+header {
+    background: #72bed4;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+form {
+    padding: 25px;
+}
+
+/* Card sections */
+.card {
+    background: #f9f9ff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid #5f7cff;
+    border-radius: 6px;
+}
+
+.card h2 {
+    margin-bottom: 15px;
+    color: #5f7cff;
+}
+
+/* Input fields */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* Two-column rows */
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+/* Bus seat grid */
+.bus-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    margin-top: 10px;
+}
+
+/* Seats */
+.seat {
+    background: #5f7cff;  /* Available seats → blue */
+    padding: 12px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+}
+
+.seat:hover {
+    transform: scale(1.05);
+}
+
+.seat.selected {
+    background: #28a745;  /* Selected seats → green */
+}
+
+.seat.booked {
+    background: #d9534f;  /* Booked seats → red */
+    cursor: not-allowed;
+}
+
+/* Fare box */
+.fareBox {
+    font-size: 20px;
+    font-weight: bold;
+    color: #5f7cff;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* Ticket preview */
+#ticket {
+    line-height: 1.7;
+    padding: 15px;
+    background: #f0f4ff;
+    border-radius: 6px;
+    border-left: 5px solid #5f7cff;
+}
+
+/* Book button */
+.bookBtn {
+    width: 100%;
+    padding: 12px;
+    background: #6d7fcd;
+    border: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.bookBtn:hover {
+    background: #6675bd;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .row {
+        grid-template-columns: 1fr;
+    }
+
+    .bus-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SafariRide Bus Booking System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+<h1>🚌 SafariRide Bus Booking System</h1>
+<p>Fast • Safe • Reliable Travel</p>
+</header>
+
+<form id="bookingForm">
+
+<!-- Passenger Details -->
+<section class="card">
+<h2>Passenger Details</h2>
+
+<input type="text" id="name" placeholder="Full Name" required>
+<input type="text" id="idNumber" placeholder="ID Number" required>
+<input type="tel" id="contact" placeholder="Phone Number" required>
+
+</section>
+
+<!-- Travel Details -->
+<section class="card">
+
+<h2>Travel Details</h2>
+
+<div class="row">
+<input type="text" id="fromCounty" placeholder="From County" required>
+<input type="text" id="toCounty" placeholder="To County" required>
+</div>
+
+<div class="row">
+<input type="date" id="travelDate" required>
+
+<select id="travelTime" required>
+<option value="">Select Time</option>
+<option>06:00 AM</option>
+<option>08:00 AM</option>
+<option>10:00 AM</option>
+<option>02:00 PM</option>
+<option>06:00 PM</option>
+<option>09:00 PM</option>
+</select>
+</div>
+
+</section>
+
+<!-- Bus Selection -->
+<section class="card">
+
+<h2>Available Buses</h2>
+
+<select id="busSelect" required>
+<option value="">Choose Bus</option>
+<option>SafariRide Express</option>
+<option>SafariRide Luxury</option>
+<option>SafariRide Classic</option>
+<option>SafariRide Nightliner</option>
+</select>
+
+<input type="number" id="seatCount" placeholder="Number of Seats" min="1" max="10" required>
+
+</section>
+
+<!-- Seat Simulation -->
+<section class="card">
+
+<h2>Select Your Seats</h2>
+
+<div id="busSeats" class="bus-grid"></div>
+
+</section>
+
+<!-- Payment -->
+<section class="card">
+
+<h2>Payment</h2>
+
+<select id="paymentMode" required>
+<option value="">Payment Method</option>
+<option>M-Pesa</option>
+<option>Card</option>
+<option>Bank Transfer</option>
+</select>
+
+<div class="fareBox">
+Amount: <span id="fareAmount">KES 0</span>
+</div>
+
+</section>
+
+<!-- Ticket Summary -->
+<section class="card">
+
+<h2>Ticket Preview</h2>
+
+<div id="ticket"></div>
+
+</section>
+
+<button type="submit" class="bookBtn">Book Now</button>
+
+</form>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
