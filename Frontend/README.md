@@ -32,3 +32,8 @@ A full-stack web application that allows users to book bus seats online.
 
 1. Install Node.js
 2. Install dependencies
+
+
+## Author
+Patience Ngure
+
